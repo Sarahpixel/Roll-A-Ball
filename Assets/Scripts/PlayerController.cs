@@ -1,19 +1,39 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 
 public class PlayerController : MonoBehaviour
 {
     Rigidbody rb;
     public float speed = 1.0f;
     public int pickupCount;
+    int totalPickups;
     private bool wonGame = false;
+    [Header("UI")]
+    public TMP_Text Score_text;
+    public TMP_Text WinText;
+    public GameObject inGamePanel;
+    public GameObject winPanel;
+    public Image pickupFill;
+    public float pickupChunck;
+   
     void Start()
     {
+        //turn off our win panel object
+        winPanel.SetActive(false);
+        //turn on our in game panel
+        inGamePanel.SetActive(true);
         //gets the rigidbody componet attached to this game object
         rb = GetComponent<Rigidbody>();
         // Work out how many pickups are in the scene and store in (pickup count)
         pickupCount = GameObject.FindGameObjectsWithTag("Pickup").Length;
+        //Displays the pick up count
+        totalPickups = pickupCount;
+        //work out the amount of fill for our pickup fill
+        pickupChunck =  1.0f/totalPickups;
+        pickupFill.fillAmount = 0;
         //Display the pickups to the user
         CheckPickups();
 
@@ -47,6 +67,8 @@ public class PlayerController : MonoBehaviour
         {
             //Decrement the pickupcount when we collide with the pickup
             pickupCount -= 1;
+            //increase the fill amount of our pickup fill image
+            pickupFill.fillAmount = pickupFill.fillAmount + pickupChunck;
             //Display the pickups to the user
             CheckPickups();
 
@@ -56,20 +78,31 @@ public class PlayerController : MonoBehaviour
     void CheckPickups()
     {
         //Display the pickupcount to the player
-          Debug.Log("Pickup Count:" + pickupCount);
+        Score_text.text ="Cubes Left:"+ pickupCount .ToString() + "/" + totalPickups.ToString
+            ();
+       
         //Check if the pickupcount ==0 
          if (pickupCount==0)
          {
             //if pickup count ==0 display win message, remove contols from player??
-            Debug.Log("You Win");
+          winPanel.SetActive(true);
+            //turn on our in game panel
+            inGamePanel.SetActive(false);
             //remove the player controls
             wonGame = true;
             //set the velocity of the rigid body to zero
             rb.velocity = Vector3.zero;
+            rb.angularVelocity = Vector3.zero;
          }
 
     }
   
+    public void ResetGame()
+    {
+
+        UnityEngine.SceneManagement.SceneManager.LoadScene
+        (UnityEngine.SceneManagement.SceneManager.GetActiveScene().name);
+    }
 
     
 
