@@ -115,7 +115,7 @@ public class PlayerController : MonoBehaviour
     void CheckPickups()
     {
         //Display the pickupcount to the player
-        Score_text.text ="Cubes Left:"+ pickupCount .ToString() + "/" + totalPickups.ToString
+        Score_text.text ="Peepy Left:"+ pickupCount .ToString() + "/" + totalPickups.ToString
             ();
        
         //Check if the pickupcount ==0 
