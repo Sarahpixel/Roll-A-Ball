@@ -4,10 +4,40 @@ using UnityEngine;
 
 public class SoundControllor : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public AudioClip pickUpSound;
+    public AudioClip winSound;
+
+    AudioSource audioSource;
+
+    private void Start()
     {
-        
+        audioSource = GetComponent<AudioSource>();
+    }
+
+    public void PlayPickUpSound()
+    {
+        PlaySound(pickUpSound);
+    }
+
+    public void PlaywinSound()
+    {
+        PlaySound( winSound);
+    }
+   
+    void PlaySound(AudioClip _newSound)
+    {
+        //set the audio sources audioclip to be the passed in sound
+        audioSource.clip = _newSound;
+        //plays the audio source
+        audioSource.Play();
+    }
+
+    public void PlayCollisionSound(GameObject _go)
+    {
+       if (_go.GetComponent<AudioSource>() != null)
+        {
+            _go.GetComponent<AudioSource>().Play();
+        }
     }
 
     // Update is called once per frame

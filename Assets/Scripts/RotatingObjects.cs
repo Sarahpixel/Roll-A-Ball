@@ -12,10 +12,10 @@ public class RotatingObjects : MonoBehaviour
     public Vector3 rotationAxis;
     public float rotationSpeed;
 
-    private void start()
+    private void Start()
     {
-        startRotation= transform,eulerAngles;
-        StartCoroutine(Rotate));
+        startRotation= transform.eulerAngles;
+        StartCoroutine(Rotate());
     }
 
     IEnumerator Rotate()
@@ -24,18 +24,18 @@ public class RotatingObjects : MonoBehaviour
         var toAngle = Quaternion.Euler(newRot);
         while (transform.rotation != toAngle)
         {
-            transform.rotation= Quaternion,RotateTowards(transform.rotation, toAngle, speed * Time.deltaTime);
+            transform.rotation= Quaternion.RotateTowards(transform.rotation, toAngle, speed * Time.deltaTime);
             yield return null;
         }
 
-        yield return new WaitSeconds(waitTime);
+        yield return new WaitForSeconds(waitTime);
         rotated = !rotated;
-        StartCoroutine(Rotate));
+        StartCoroutine(Rotate());
     }
 
     void Update()
     {
-        transform.Rotate(rotationAxis * rotationSpeed * waitTime.deltaTime);
+        transform.Rotate(rotationAxis * rotationSpeed *Time.deltaTime);
 
     }
 }

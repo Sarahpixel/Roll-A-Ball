@@ -23,6 +23,7 @@ public class PlayerController : MonoBehaviour
     public GameObject winPanel;
     public Image pickupFill;
     public float pickupChunck;
+    SoundControllor soundControllor;
    
     void Start()
     {
@@ -44,6 +45,7 @@ public class PlayerController : MonoBehaviour
         pickupFill.fillAmount = 0;
         //Display the pickups to the user
         CheckPickups();
+        soundControllor = FindObjectOfType<SoundControllor>();
 
     }
 
@@ -115,8 +117,7 @@ public class PlayerController : MonoBehaviour
     void CheckPickups()
     {
         //Display the pickupcount to the player
-        Score_text.text ="Peepy Left:"+ pickupCount .ToString() + "/" + totalPickups.ToString
-            ();
+        Score_text.text ="Peepy Left:"+ pickupCount .ToString() + "/" + totalPickups.ToString();
        
         //Check if the pickupcount ==0 
          if (pickupCount==0)
