@@ -17,6 +17,7 @@ public class PlayerController : MonoBehaviour
 
     //Controllers
     SoundController soundController;
+    GameControlller gameControlller;
 
     int totalPickups;
     private bool wonGame = false;
@@ -28,7 +29,7 @@ public class PlayerController : MonoBehaviour
     public GameObject winPanel;
     public Image pickupFill;
     public float pickupChunck;
-    SoundControllor soundControllor;
+    
    
     void Start()
     {
@@ -40,6 +41,9 @@ public class PlayerController : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         gameoverScreen.SetActive(false);
         ResetPoint = GameObject.Find("Reset Point");
+        soundControllor = FindObjectOfType<SoundControllor>();
+        gameControllor = FindObjectOfType<GameControllor>();
+
         originalColor = GetComponent<Renderer>().material.color;
         // Work out how many pickups are in the scene and store in (pickup count)
         pickupCount = GameObject.FindGameObjectsWithTag("Pickup").Length;
@@ -50,7 +54,6 @@ public class PlayerController : MonoBehaviour
         pickupFill.fillAmount = 0;
         //Display the pickups to the user
         CheckPickups();
-        soundControllor = FindObjectOfType<SoundControllor>();
 
     }
 
@@ -60,7 +63,11 @@ public class PlayerController : MonoBehaviour
         //if we have won the game, return the function
         if (wonGame == true)
             return;
-        if (resetting) return;
+        if (resetting)
+            return;
+
+        if (gameControlller.controlType == ControlType.WorldTilt)
+            return;
 
         if (grounded)
         {

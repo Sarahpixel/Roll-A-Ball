@@ -345,6 +345,7 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.ref.dll"
 "Assets/Scripts/Booster.cs"
 "Assets/Scripts/CameraController.cs"
+"Assets/Scripts/GameController.cs"
 "Assets/Scripts/HelloWorld.cs"
 "Assets/Scripts/Pause.cs"
 "Assets/Scripts/PlayerController.cs"
@@ -353,6 +354,7 @@
 "Assets/Scripts/SceneControllor.cs"
 "Assets/Scripts/SoundController.cs"
 "Assets/Scripts/Teleporter.cs"
+"Assets/Scripts/TiltControls.cs"
 -langversion:9.0
 
 /deterministic
