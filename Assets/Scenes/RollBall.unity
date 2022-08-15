@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.48843634, g: 0.4101786, b: 0.3906741, a: 1}
+  m_IndirectSpecularColor: {r: 0.4883898, g: 0.41015625, b: 0.3905643, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -506,6 +506,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_SendPointerHoverToParent: 1
   m_HorizontalAxis: Horizontal
   m_VerticalAxis: Vertical
   m_SubmitButton: Submit
@@ -580,9 +581,9 @@ Transform:
   - {fileID: 237854796}
   - {fileID: 1202607117}
   - {fileID: 1255725016}
-  - {fileID: 1154829901}
   - {fileID: 1091236694}
   - {fileID: 2056218716}
+  - {fileID: 1154829901}
   - {fileID: 1637917866}
   - {fileID: 1339152128}
   - {fileID: 1644883457}
@@ -627,7 +628,6 @@ Transform:
   - {fileID: 1534293219}
   - {fileID: 735198495}
   - {fileID: 1706047856}
-  - {fileID: 567442343}
   - {fileID: 40021212}
   - {fileID: 511559068}
   - {fileID: 399195364}
@@ -637,17 +637,18 @@ Transform:
   - {fileID: 1121041482}
   - {fileID: 570691369}
   - {fileID: 1722795229}
-  - {fileID: 1996840376}
   - {fileID: 1133015063}
   - {fileID: 1155828276}
   - {fileID: 460054666}
+  - {fileID: 567442343}
   - {fileID: 833787398}
   - {fileID: 329423137}
+  - {fileID: 1407701665}
   - {fileID: 564124159}
   - {fileID: 2083183402}
   - {fileID: 193427973}
+  - {fileID: 1996840376}
   - {fileID: 1288556527}
-  - {fileID: 1407701665}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3332,7 +3333,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 923424279916466245, guid: 3c87f49ed632237419819f1ff25a2efa, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.198
+      value: -2.22
       objectReference: {fileID: 0}
     - target: {fileID: 923424279916466245, guid: 3c87f49ed632237419819f1ff25a2efa, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3687,6 +3688,10 @@ PrefabInstance:
     - target: {fileID: 923424279494206319, guid: 3c87f49ed632237419819f1ff25a2efa, type: 3}
       propertyPath: m_Name
       value: Outside_bend (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 923424279916466245, guid: 3c87f49ed632237419819f1ff25a2efa, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2.007
       objectReference: {fileID: 0}
     - target: {fileID: 923424279916466245, guid: 3c87f49ed632237419819f1ff25a2efa, type: 3}
       propertyPath: m_LocalPosition.z
@@ -8113,7 +8118,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!114 &1577568971
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10337,6 +10342,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be592bf77cc8d2f49bedc3366342fc4b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  wallType: 0
 --- !u!114 &2115200047
 MonoBehaviour:
   m_ObjectHideFlags: 0

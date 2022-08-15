@@ -3,8 +3,37 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+public enum WallType { Normal,Punishing}
+
 public class SceneControllor : MonoBehaviour
 {
+    public static SceneControllor instance;
+    public WallType wallType;
+
+    private void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+
+    }
+
+    // this is to have a toggle button for on or off, punishing walls
+    public void ToggleWallType(bool _punishing)
+    {
+        if (_punishing)
+            wallType = WallType.Punishing;
+        else
+            wallType = WallType.Normal;
+    }
+    
+    
     // Start is called before the first frame update
     public void ChangeScene(string RollBall)
     {

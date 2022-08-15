@@ -11,7 +11,12 @@ public class PlayerController : MonoBehaviour
     public int pickupCount;
     GameObject ResetPoint;
     bool resetting = false;
+    bool grounded = true;
     Color originalColor;
+
+
+    //Controllers
+    SoundController soundController;
 
     int totalPickups;
     private bool wonGame = false;
@@ -57,6 +62,25 @@ public class PlayerController : MonoBehaviour
             return;
         if (resetting) return;
 
+        if (grounded)
+        {
+            float moveHorizontal = Input.GetAxis("Horizontal");
+            float moveVertical = Input.GetAxis("Vertical");
+            Vector3 movement = new Vector3(moveHorizontal, 0.0f, moveVertical);
+            rb.AddForce(movement * speed);
+        }
+
+        private void OnCollisionStay(Collision collision)
+        {
+            if (collision.collider.CompareTag("Ground"))
+                grounded = true;
+        }
+        private void OnCollisionExit(Collision collision)
+        {
+            if (collision.collider.CompareTag("Ground"))
+                grounded = false;
+        }
+
         //store the horizontal axis value in a float
         float moveHorizontal = Input.GetAxis("Horizontal");
         //store the vertical axis value in a float
@@ -82,7 +106,7 @@ public class PlayerController : MonoBehaviour
             pickupFill.fillAmount = pickupFill.fillAmount + pickupChunck;
             //Display the pickups to the user
             CheckPickups();
-
+            soundController.PlayPickupSound();
             Destroy(other.gameObject);
         }
        
@@ -92,6 +116,14 @@ public class PlayerController : MonoBehaviour
         if (collision.gameObject.CompareTag("Respawn"))
         {
             StartCoroutine(ResetPlayer());
+        }
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Wall"))
+        {
+            soundController.PlayCollisionSound(collision.gameObject);
         }
     }
 
@@ -142,15 +174,11 @@ public class PlayerController : MonoBehaviour
         (UnityEngine.SceneManagement.SceneManager.GetActiveScene().name);
     }
 
-    
-
-    
-
-    //Create a win condition that happens when pickupcount == 0
-
-
-    
-
-    
+    void WinGame()
+    {
+        gameoverScreen.SetActive(true);
+        WinText.text = "YOU ARE A WINNER!!";
+        soundController.PlayWinSound();
+    } 
         
 }   
