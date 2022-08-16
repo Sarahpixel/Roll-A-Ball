@@ -10,10 +10,11 @@ public class GameController : MonoBehaviour
     public ControlType controlType;
 
     private void Awake()
-    {
+    {  
+        if (instance == null)
         {
-            if (instance == null)
-                DontDestroyOnload(gameObject);
+           instance = this;
+           DontDestroyOnload(gameObject);
         }
         else
         {
