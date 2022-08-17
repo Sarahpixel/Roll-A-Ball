@@ -43,10 +43,11 @@ public class SceneControllor : MonoBehaviour
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
-   
+    //Loads out Title Screen, must be called Title exactly for this code to work
     public void ToTitleScene()
     {
         SceneManager.LoadScene("Title");
+        GameController.instance.controlType = ControlType.Normal;
     }
 
     public string GetSceneName()
@@ -59,11 +60,5 @@ public class SceneControllor : MonoBehaviour
         Application.Quit();
     }
 
-    //Loads out Title Screen, must be called Title exactly for this code to work
-    public void ToTitleScene()
-    {
-        GameController.instance.controlType = ControlType.Normal;
-        SceneManager.LoadScene("Title");
-    }
-
+   
 }

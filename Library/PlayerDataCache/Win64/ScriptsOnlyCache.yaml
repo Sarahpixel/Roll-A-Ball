@@ -2,11 +2,14 @@ ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
     - CameraController
+    - GameController
     - Pause
     - PlayerController
     - RotatingObjects
     - Rotator
     - SceneControllor
+    - SoundController
+    - TiltControls
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
     Unity.TextMeshPro.dll:
@@ -63,8 +66,14 @@ ScriptsOnlyBuild:
     fullTypeName: SceneControllor
     methodName: ChangeScene
   - assembly: Assembly-CSharp
+    fullTypeName: GameController
+    methodName: ToggleWorldTilt
+  - assembly: Assembly-CSharp
     fullTypeName: SceneControllor
-    methodName: QuitGame
+    methodName: ChangeScene
+  - assembly: Assembly-CSharp
+    fullTypeName: Pause
+    methodName: TogglePause
   - assembly: Assembly-CSharp
     fullTypeName: Pause
     methodName: TogglePause
@@ -112,40 +121,127 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 83
       Script: {instanceID: 0}
-    - Class: 89
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 108
+      Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 1830}
+    - Class: 114
+      Script: {instanceID: 2750}
+    - Class: 114
+      Script: {instanceID: 2822}
+    - Class: 114
+      Script: {instanceID: 3030}
+    - Class: 114
+      Script: {instanceID: 3304}
+    - Class: 114
+      Script: {instanceID: 3540}
+    - Class: 114
+      Script: {instanceID: 4234}
+    - Class: 114
+      Script: {instanceID: 4588}
+    - Class: 114
+      Script: {instanceID: 5234}
+    - Class: 114
+      Script: {instanceID: 5260}
+    - Class: 114
+      Script: {instanceID: 5714}
+    - Class: 114
+      Script: {instanceID: 5794}
+    - Class: 114
+      Script: {instanceID: 5942}
+    - Class: 114
+      Script: {instanceID: 6026}
+    - Class: 114
+      Script: {instanceID: 6252}
+    - Class: 114
+      Script: {instanceID: 7892}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
+      Script: {instanceID: 0}
+    - Class: 135
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 196
+      Script: {instanceID: 0}
+    - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
+      Script: {instanceID: 0}
+    Assets/Scenes/TiltWorld.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
+      Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
+    - Class: 23
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 33
+      Script: {instanceID: 0}
+    - Class: 43
+      Script: {instanceID: 0}
+    - Class: 48
+      Script: {instanceID: 0}
+    - Class: 54
+      Script: {instanceID: 0}
+    - Class: 64
+      Script: {instanceID: 0}
+    - Class: 65
+      Script: {instanceID: 0}
+    - Class: 81
+      Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
       Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1534}
+      Script: {instanceID: 1830}
     - Class: 114
-      Script: {instanceID: 2496}
+      Script: {instanceID: 2750}
     - Class: 114
-      Script: {instanceID: 2568}
+      Script: {instanceID: 2822}
     - Class: 114
-      Script: {instanceID: 2776}
+      Script: {instanceID: 3030}
     - Class: 114
-      Script: {instanceID: 3048}
+      Script: {instanceID: 3276}
     - Class: 114
-      Script: {instanceID: 3282}
+      Script: {instanceID: 3304}
     - Class: 114
-      Script: {instanceID: 4328}
+      Script: {instanceID: 3540}
     - Class: 114
-      Script: {instanceID: 4974}
+      Script: {instanceID: 4234}
     - Class: 114
-      Script: {instanceID: 5000}
+      Script: {instanceID: 4588}
     - Class: 114
-      Script: {instanceID: 5532}
+      Script: {instanceID: 5234}
     - Class: 114
-      Script: {instanceID: 5680}
+      Script: {instanceID: 5714}
     - Class: 114
-      Script: {instanceID: 5764}
+      Script: {instanceID: 5794}
     - Class: 114
-      Script: {instanceID: 5990}
+      Script: {instanceID: 5942}
     - Class: 114
-      Script: {instanceID: 7630}
+      Script: {instanceID: 6026}
+    - Class: 114
+      Script: {instanceID: 6252}
+    - Class: 114
+      Script: {instanceID: 7892}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -185,34 +281,38 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 83
       Script: {instanceID: 0}
+    - Class: 89
+      Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1534}
+      Script: {instanceID: 1830}
     - Class: 114
-      Script: {instanceID: 2150}
+      Script: {instanceID: 2404}
     - Class: 114
-      Script: {instanceID: 2496}
+      Script: {instanceID: 2750}
     - Class: 114
-      Script: {instanceID: 2568}
+      Script: {instanceID: 2822}
     - Class: 114
-      Script: {instanceID: 2776}
+      Script: {instanceID: 3030}
     - Class: 114
-      Script: {instanceID: 3048}
+      Script: {instanceID: 3304}
     - Class: 114
-      Script: {instanceID: 4036}
+      Script: {instanceID: 4296}
     - Class: 114
-      Script: {instanceID: 4290}
+      Script: {instanceID: 4550}
     - Class: 114
-      Script: {instanceID: 4974}
+      Script: {instanceID: 5234}
     - Class: 114
-      Script: {instanceID: 5532}
+      Script: {instanceID: 5714}
     - Class: 114
-      Script: {instanceID: 5680}
+      Script: {instanceID: 5794}
     - Class: 114
-      Script: {instanceID: 5990}
+      Script: {instanceID: 5942}
+    - Class: 114
+      Script: {instanceID: 6252}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -232,22 +332,16 @@ ScriptsOnlyBuild:
   scriptHashData:
   - hash:
       serializedVersion: 2
-      Hash: a6e561615949734e9f12f9b61661f43e
-    assemblyName: UnityEngine.UI.dll
-    namespaceName: UnityEngine.UI
-    className: Image
-  - hash:
-      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UIElements
     className: PanelRaycaster
   - hash:
       serializedVersion: 2
-      Hash: 986cecd8c8840cf0517ca4862300790d
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: SoundControllor
+      Hash: a6e561615949734e9f12f9b61661f43e
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: Image
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -340,7 +434,7 @@ ScriptsOnlyBuild:
     className: UnityOnBecameVisibleMessageListener
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+      Hash: 6859de4134c664eb9b590b39347e3167
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: SceneControllor
@@ -448,6 +542,12 @@ ScriptsOnlyBuild:
     className: UnityOnDropdownValueChangedMessageListener
   - hash:
       serializedVersion: 2
+      Hash: afc5b93a7b192de2dcb3832fe35a5c7e
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: TiltControls
+  - hash:
+      serializedVersion: 2
       Hash: 0fd6822f6177297bd0eb4d83cc7a9030
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -458,6 +558,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: Button
+  - hash:
+      serializedVersion: 2
+      Hash: d4842420ed2c20aab012cd115446ac29
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Booster
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -596,6 +702,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core.dll
     namespaceName: Unity.VisualScripting
     className: VariablesSaver
+  - hash:
+      serializedVersion: 2
+      Hash: 986cecd8c8840cf0517ca4862300790d
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: SoundController
   - hash:
       serializedVersion: 2
       Hash: 18c222bef9ae745ce69ddde9b74337ca
@@ -788,6 +900,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.State.dll
     namespaceName: Unity.VisualScripting
     className: StateGraphAsset
+  - hash:
+      serializedVersion: 2
+      Hash: a18ef27bf68488ee6dda0bcbd08baa55
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: GameController
   - hash:
       serializedVersion: 2
       Hash: a1aa98c78061c6f03a8c124cda576e67
@@ -1062,4 +1180,5 @@ ScriptsOnlyBuild:
   scenePathNames:
   - Assets/Scenes/Title.unity
   - Assets/Scenes/RollBall.unity
+  - Assets/Scenes/TiltWorld.unity
   playerPath: C:/Users/snguyen3/WORKSPACE/Roll-A-Ball/Build/SARAH_N_AGA206_A1.exe

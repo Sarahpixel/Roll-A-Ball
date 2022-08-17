@@ -5,7 +5,12 @@ TagManager:
   serializedVersion: 2
   tags:
   - Pickup
-  - Rotate
+  - Walls
+  - Ground
+  - Wall
+  - WinPanel
+  - InGamePanel
+  - PausePanel
   layers:
   - Default
   - TransparentFX

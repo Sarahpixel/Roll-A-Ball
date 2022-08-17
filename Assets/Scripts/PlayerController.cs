@@ -17,7 +17,7 @@ public class PlayerController : MonoBehaviour
 
     //Controllers
     SoundController soundController;
-    GameControlller gameControlller;
+    GameController gameController;
 
     int totalPickups;
     private bool wonGame = false;
@@ -41,8 +41,8 @@ public class PlayerController : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         gameoverScreen.SetActive(false);
         ResetPoint = GameObject.Find("Reset Point");
-        soundControllor = FindObjectOfType<SoundControllor>();
-        gameControllor = FindObjectOfType<GameControllor>();
+        soundController = FindObjectOfType<SoundController>();
+        gameController = FindObjectOfType<GameController>();
 
         originalColor = GetComponent<Renderer>().material.color;
         // Work out how many pickups are in the scene and store in (pickup count)
@@ -57,7 +57,7 @@ public class PlayerController : MonoBehaviour
 
     }
 
-
+   
     void FixedUpdate()
     {
         //if we have won the game, return the function
@@ -66,44 +66,33 @@ public class PlayerController : MonoBehaviour
         if (resetting)
             return;
 
-        if (gameControlller.controlType == ControlType.WorldTilt)
+        if (gameController.controlType == ControlType.WorldTilt)
             return;
 
         if (grounded)
         {
-            float moveHorizontal = Input.GetAxis("Horizontal");
-            float moveVertical = Input.GetAxis("Vertical");
-            Vector3 movement = new Vector3(moveHorizontal, 0.0f, moveVertical);
-            rb.AddForce(movement * speed);
-        }
-
-        private void OnCollisionStay(Collision collision)
-        {
-            if (collision.collider.CompareTag("Ground"))
-                grounded = true;
-        }
-        private void OnCollisionExit(Collision collision)
-        {
-            if (collision.collider.CompareTag("Ground"))
-                grounded = false;
-        }
-
+           
         //store the horizontal axis value in a float
         float moveHorizontal = Input.GetAxis("Horizontal");
         //store the vertical axis value in a float
         float moveVertical = Input.GetAxis("Vertical");
 
         //creates a new vector 3 based on the horizotal and vertical values
-        Vector3 movement = new Vector3(moveHorizontal, 0.0f, moveVertical);
-        
+        Vector3 movement = new Vector3(moveHorizontal, 0.0f, moveVertical);     
 
         //add force to our rigidbody from our movement multiplying the movement by a number
         rb.AddForce(movement* 5);
+        }
+
+       
+
+   
     }
 
    
      private void OnTriggerEnter(Collider other)
      {
+        Debug.Log("Hit");
         //if we collide witha pickup, destroy the pickup
         if (other.gameObject.CompareTag("Pickup"))
         {
@@ -113,7 +102,7 @@ public class PlayerController : MonoBehaviour
             pickupFill.fillAmount = pickupFill.fillAmount + pickupChunck;
             //Display the pickups to the user
             CheckPickups();
-            soundController.PlayPickupSound();
+            soundController.PlayPickUpSound();
             Destroy(other.gameObject);
         }
        
@@ -124,14 +113,23 @@ public class PlayerController : MonoBehaviour
         {
             StartCoroutine(ResetPlayer());
         }
-    }
-
-    private void OnCollisionEnter(Collision collision)
-    {
         if (collision.gameObject.CompareTag("Wall"))
         {
             soundController.PlayCollisionSound(collision.gameObject);
         }
+    }
+
+    
+
+    private void OnCollisionStay(Collision collision)
+    {
+        if (collision.collider.CompareTag("Ground"))
+            grounded = true;
+    }
+    private void OnCollisionExit(Collision collision)
+    {
+        if (collision.collider.CompareTag("Ground"))
+            grounded = false;
     }
 
     public IEnumerator ResetPlayer()

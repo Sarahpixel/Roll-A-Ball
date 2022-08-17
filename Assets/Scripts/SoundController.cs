@@ -20,7 +20,7 @@ public class SoundController : MonoBehaviour
         PlaySound(pickUpSound);
     }
 
-    public void PlaywinSound()
+    public void PlayWinSound()
     {
         PlaySound(winSound);
     }

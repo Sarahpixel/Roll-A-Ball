@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public enum ControlType { Normal, WorldTilt }
 
@@ -14,7 +15,7 @@ public class GameController : MonoBehaviour
         if (instance == null)
         {
            instance = this;
-           DontDestroyOnload(gameObject);
+           DontDestroyOnLoad(gameObject);
         }
         else
         {
