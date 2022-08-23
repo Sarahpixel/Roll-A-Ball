@@ -10,7 +10,7 @@ TagManager:
   - Wall
   - WinPanel
   - InGamePanel
-  - PausePanel
+  - Teleporter
   layers:
   - Default
   - TransparentFX

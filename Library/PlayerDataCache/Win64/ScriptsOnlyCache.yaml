@@ -75,6 +75,24 @@ ScriptsOnlyBuild:
     fullTypeName: Pause
     methodName: TogglePause
   - assembly: Assembly-CSharp
+    fullTypeName: SceneControllor
+    methodName: ToTitleScene
+  - assembly: Assembly-CSharp
+    fullTypeName: SceneControllor
+    methodName: ChangeScene
+  - assembly: Assembly-CSharp
+    fullTypeName: GameController
+    methodName: ToggleWorldTilt
+  - assembly: Assembly-CSharp
+    fullTypeName: SceneControllor
+    methodName: ChangeScene
+  - assembly: Assembly-CSharp
+    fullTypeName: SceneControllor
+    methodName: ReloadScene
+  - assembly: Assembly-CSharp
+    fullTypeName: SceneControllor
+    methodName: ChangeScene
+  - assembly: Assembly-CSharp
     fullTypeName: Pause
     methodName: TogglePause
   - assembly: Assembly-CSharp
@@ -90,7 +108,7 @@ ScriptsOnlyBuild:
     fullTypeName: SceneControllor
     methodName: ChangeScene
   sceneClasses:
-    Assets/Scenes/RollBall.unity:
+    Assets/Scenes/Roll-A-Ball.unity:
     - Class: 1
       Script: {instanceID: 0}
     - Class: 4
@@ -121,42 +139,44 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 83
       Script: {instanceID: 0}
+    - Class: 89
+      Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1830}
+      Script: {instanceID: 9100}
     - Class: 114
-      Script: {instanceID: 2750}
+      Script: {instanceID: 10010}
     - Class: 114
-      Script: {instanceID: 2822}
+      Script: {instanceID: 10082}
     - Class: 114
-      Script: {instanceID: 3030}
+      Script: {instanceID: 10284}
     - Class: 114
-      Script: {instanceID: 3304}
+      Script: {instanceID: 10558}
     - Class: 114
-      Script: {instanceID: 3540}
+      Script: {instanceID: 10788}
     - Class: 114
-      Script: {instanceID: 4234}
+      Script: {instanceID: 11466}
     - Class: 114
-      Script: {instanceID: 4588}
+      Script: {instanceID: 11818}
     - Class: 114
-      Script: {instanceID: 5234}
+      Script: {instanceID: 12454}
     - Class: 114
-      Script: {instanceID: 5260}
+      Script: {instanceID: 12478}
     - Class: 114
-      Script: {instanceID: 5714}
+      Script: {instanceID: 12924}
     - Class: 114
-      Script: {instanceID: 5794}
+      Script: {instanceID: 13004}
     - Class: 114
-      Script: {instanceID: 5942}
+      Script: {instanceID: 13150}
     - Class: 114
-      Script: {instanceID: 6026}
+      Script: {instanceID: 13234}
     - Class: 114
-      Script: {instanceID: 6252}
+      Script: {instanceID: 13460}
     - Class: 114
-      Script: {instanceID: 7892}
+      Script: {instanceID: 15092}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -206,42 +226,44 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 83
       Script: {instanceID: 0}
+    - Class: 89
+      Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1830}
+      Script: {instanceID: 9100}
     - Class: 114
-      Script: {instanceID: 2750}
+      Script: {instanceID: 10010}
     - Class: 114
-      Script: {instanceID: 2822}
+      Script: {instanceID: 10082}
     - Class: 114
-      Script: {instanceID: 3030}
+      Script: {instanceID: 10284}
     - Class: 114
-      Script: {instanceID: 3276}
+      Script: {instanceID: 10530}
     - Class: 114
-      Script: {instanceID: 3304}
+      Script: {instanceID: 10558}
     - Class: 114
-      Script: {instanceID: 3540}
+      Script: {instanceID: 10788}
     - Class: 114
-      Script: {instanceID: 4234}
+      Script: {instanceID: 11466}
     - Class: 114
-      Script: {instanceID: 4588}
+      Script: {instanceID: 11818}
     - Class: 114
-      Script: {instanceID: 5234}
+      Script: {instanceID: 12454}
     - Class: 114
-      Script: {instanceID: 5714}
+      Script: {instanceID: 12924}
     - Class: 114
-      Script: {instanceID: 5794}
+      Script: {instanceID: 13004}
     - Class: 114
-      Script: {instanceID: 5942}
+      Script: {instanceID: 13150}
     - Class: 114
-      Script: {instanceID: 6026}
+      Script: {instanceID: 13234}
     - Class: 114
-      Script: {instanceID: 6252}
+      Script: {instanceID: 13460}
     - Class: 114
-      Script: {instanceID: 7892}
+      Script: {instanceID: 15092}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -281,38 +303,36 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 83
       Script: {instanceID: 0}
-    - Class: 89
-      Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1830}
+      Script: {instanceID: 9100}
     - Class: 114
-      Script: {instanceID: 2404}
+      Script: {instanceID: 9670}
     - Class: 114
-      Script: {instanceID: 2750}
+      Script: {instanceID: 10010}
     - Class: 114
-      Script: {instanceID: 2822}
+      Script: {instanceID: 10082}
     - Class: 114
-      Script: {instanceID: 3030}
+      Script: {instanceID: 10284}
     - Class: 114
-      Script: {instanceID: 3304}
+      Script: {instanceID: 10558}
     - Class: 114
-      Script: {instanceID: 4296}
+      Script: {instanceID: 11528}
     - Class: 114
-      Script: {instanceID: 4550}
+      Script: {instanceID: 11782}
     - Class: 114
-      Script: {instanceID: 5234}
+      Script: {instanceID: 12454}
     - Class: 114
-      Script: {instanceID: 5714}
+      Script: {instanceID: 12924}
     - Class: 114
-      Script: {instanceID: 5794}
+      Script: {instanceID: 13004}
     - Class: 114
-      Script: {instanceID: 5942}
+      Script: {instanceID: 13150}
     - Class: 114
-      Script: {instanceID: 6252}
+      Script: {instanceID: 13460}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -1179,6 +1199,6 @@ ScriptsOnlyBuild:
   platform: 19
   scenePathNames:
   - Assets/Scenes/Title.unity
-  - Assets/Scenes/RollBall.unity
+  - Assets/Scenes/Roll-A-Ball.unity
   - Assets/Scenes/TiltWorld.unity
   playerPath: C:/Users/snguyen3/WORKSPACE/Roll-A-Ball/Build/SARAH_N_AGA206_A1.exe

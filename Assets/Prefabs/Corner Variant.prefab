@@ -110,7 +110,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3352006275364535064, guid: 9de1f85d79d6fc04b96bef262862cbce, type: 3}
       propertyPath: m_Name
-      value: Corner
+      value: Corner Variant
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9de1f85d79d6fc04b96bef262862cbce, type: 3}
@@ -119,3 +119,22 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3085636240116767716, guid: 9de1f85d79d6fc04b96bef262862cbce, type: 3}
   m_PrefabInstance: {fileID: 1313705498855229425}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &4377375427308944617 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3352006275364535064, guid: 9de1f85d79d6fc04b96bef262862cbce, type: 3}
+  m_PrefabInstance: {fileID: 1313705498855229425}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &3240199670584214849
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4377375427308944617}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -5221963080773851136, guid: 124ccf6dd626e1744a9930848370e0b0, type: 3}
