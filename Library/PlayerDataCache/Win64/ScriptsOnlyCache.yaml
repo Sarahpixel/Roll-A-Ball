@@ -5,10 +5,12 @@ ScriptsOnlyBuild:
     - GameController
     - Pause
     - PlayerController
+    - RotateObject
     - RotatingObjects
     - Rotator
     - SceneControllor
     - SoundController
+    - Teleporter
     - TiltControls
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
@@ -139,53 +141,61 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 83
       Script: {instanceID: 0}
-    - Class: 89
-      Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 9100}
+      Script: {instanceID: 2248}
     - Class: 114
-      Script: {instanceID: 10010}
+      Script: {instanceID: 3192}
     - Class: 114
-      Script: {instanceID: 10082}
+      Script: {instanceID: 3264}
     - Class: 114
-      Script: {instanceID: 10284}
+      Script: {instanceID: 3314}
     - Class: 114
-      Script: {instanceID: 10558}
+      Script: {instanceID: 3480}
     - Class: 114
-      Script: {instanceID: 10788}
+      Script: {instanceID: 3774}
     - Class: 114
-      Script: {instanceID: 11466}
+      Script: {instanceID: 3954}
     - Class: 114
-      Script: {instanceID: 11818}
+      Script: {instanceID: 4020}
     - Class: 114
-      Script: {instanceID: 12454}
+      Script: {instanceID: 4736}
     - Class: 114
-      Script: {instanceID: 12478}
+      Script: {instanceID: 5100}
     - Class: 114
-      Script: {instanceID: 12924}
+      Script: {instanceID: 5792}
     - Class: 114
-      Script: {instanceID: 13004}
+      Script: {instanceID: 5818}
     - Class: 114
-      Script: {instanceID: 13150}
+      Script: {instanceID: 6304}
     - Class: 114
-      Script: {instanceID: 13234}
+      Script: {instanceID: 6388}
     - Class: 114
-      Script: {instanceID: 13460}
+      Script: {instanceID: 6540}
     - Class: 114
-      Script: {instanceID: 15092}
+      Script: {instanceID: 6634}
+    - Class: 114
+      Script: {instanceID: 6870}
+    - Class: 114
+      Script: {instanceID: 8564}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
       Script: {instanceID: 0}
     - Class: 135
       Script: {instanceID: 0}
+    - Class: 136
+      Script: {instanceID: 0}
     - Class: 157
       Script: {instanceID: 0}
     - Class: 196
+      Script: {instanceID: 0}
+    - Class: 198
+      Script: {instanceID: 0}
+    - Class: 199
       Script: {instanceID: 0}
     - Class: 213
       Script: {instanceID: 0}
@@ -226,44 +236,42 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 83
       Script: {instanceID: 0}
-    - Class: 89
-      Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 9100}
+      Script: {instanceID: 2248}
     - Class: 114
-      Script: {instanceID: 10010}
+      Script: {instanceID: 3192}
     - Class: 114
-      Script: {instanceID: 10082}
+      Script: {instanceID: 3264}
     - Class: 114
-      Script: {instanceID: 10284}
+      Script: {instanceID: 3480}
     - Class: 114
-      Script: {instanceID: 10530}
+      Script: {instanceID: 3744}
     - Class: 114
-      Script: {instanceID: 10558}
+      Script: {instanceID: 3774}
     - Class: 114
-      Script: {instanceID: 10788}
+      Script: {instanceID: 4020}
     - Class: 114
-      Script: {instanceID: 11466}
+      Script: {instanceID: 4736}
     - Class: 114
-      Script: {instanceID: 11818}
+      Script: {instanceID: 5100}
     - Class: 114
-      Script: {instanceID: 12454}
+      Script: {instanceID: 5792}
     - Class: 114
-      Script: {instanceID: 12924}
+      Script: {instanceID: 6304}
     - Class: 114
-      Script: {instanceID: 13004}
+      Script: {instanceID: 6388}
     - Class: 114
-      Script: {instanceID: 13150}
+      Script: {instanceID: 6540}
     - Class: 114
-      Script: {instanceID: 13234}
+      Script: {instanceID: 6634}
     - Class: 114
-      Script: {instanceID: 13460}
+      Script: {instanceID: 6870}
     - Class: 114
-      Script: {instanceID: 15092}
+      Script: {instanceID: 8564}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -308,31 +316,31 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 9100}
+      Script: {instanceID: 2248}
     - Class: 114
-      Script: {instanceID: 9670}
+      Script: {instanceID: 2842}
     - Class: 114
-      Script: {instanceID: 10010}
+      Script: {instanceID: 3192}
     - Class: 114
-      Script: {instanceID: 10082}
+      Script: {instanceID: 3264}
     - Class: 114
-      Script: {instanceID: 10284}
+      Script: {instanceID: 3480}
     - Class: 114
-      Script: {instanceID: 10558}
+      Script: {instanceID: 3774}
     - Class: 114
-      Script: {instanceID: 11528}
+      Script: {instanceID: 4798}
     - Class: 114
-      Script: {instanceID: 11782}
+      Script: {instanceID: 5060}
     - Class: 114
-      Script: {instanceID: 12454}
+      Script: {instanceID: 5792}
     - Class: 114
-      Script: {instanceID: 12924}
+      Script: {instanceID: 6304}
     - Class: 114
-      Script: {instanceID: 13004}
+      Script: {instanceID: 6388}
     - Class: 114
-      Script: {instanceID: 13150}
+      Script: {instanceID: 6540}
     - Class: 114
-      Script: {instanceID: 13460}
+      Script: {instanceID: 6870}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -614,6 +622,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: ContentSizeFitter
+  - hash:
+      serializedVersion: 2
+      Hash: 2e11729ffa444b8704b180e6adbb715a
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: RotateObject
   - hash:
       serializedVersion: 2
       Hash: 2574ac7d50617d23cdefe4ad22f5e1ad
@@ -964,7 +978,7 @@ ScriptsOnlyBuild:
     className: UnityOnMouseUpAsButtonMessageListener
   - hash:
       serializedVersion: 2
-      Hash: 748dd2a2a28da4e618912da5ac45684b
+      Hash: e09e8bebc0fcd32bb8af1287a6b44816
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.EventSystems
     className: StandaloneInputModule
@@ -1186,7 +1200,7 @@ ScriptsOnlyBuild:
     className: UnityOnMouseEnterMessageListener
   - hash:
       serializedVersion: 2
-      Hash: abf1930d8126d0b2e00e9449129a0190
+      Hash: ec4c1d7d9fe98434976788ebc4ee261e
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.EventSystems
     className: TouchInputModule
@@ -1201,4 +1215,4 @@ ScriptsOnlyBuild:
   - Assets/Scenes/Title.unity
   - Assets/Scenes/Roll-A-Ball.unity
   - Assets/Scenes/TiltWorld.unity
-  playerPath: C:/Users/snguyen3/WORKSPACE/Roll-A-Ball/Build/SARAH_N_AGA206_A1.exe
+  playerPath: C:/Users/ereny/OneDrive/Documents/GitHub/Roll-A-Ball/Build/SARAH_N_AGA206_A1.exe
