@@ -10,5 +10,5 @@ public class Timer : MonoBehaviour
 
     SceneControllor sceneControllor;
 
-    [Header()]
 }
+
